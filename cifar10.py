@@ -25,10 +25,7 @@ y_train = tf.keras.utils.to_categorical(y_train, 10)
 y_test = tf.keras.utils.to_categorical(y_test, 10)
 
 model = efficientnet_lite(input_shape=(32, 32, 3), alpha=1)
-<<<<<<< HEAD
 model.summary()
-=======
->>>>>>> 6b59553e93f50e8aedc59f32f2308f15a012e6a3
 
 model.compile(
     loss='categorical_crossentropy',
@@ -41,7 +38,6 @@ model.fit(
     y_train,
     batch_size=32,
     validation_data=(x_test, y_test),
-<<<<<<< HEAD
     epochs=20,
     verbose=1
 )
@@ -49,8 +45,3 @@ model.fit(
 scores = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', scores[0])
 print('Test accuracy:', scores[1])
-=======
-    epochs=10000,
-    verbose=1
-)
->>>>>>> 6b59553e93f50e8aedc59f32f2308f15a012e6a3
