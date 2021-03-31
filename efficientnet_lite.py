@@ -220,8 +220,7 @@ def efficientnet_lite(input_shape=(224, 224, 3), alpha=1):
     x = layers.GlobalAveragePooling2D()(x)
     x = layers.Dense(1000)(x)
 
-    predictions_1 = layers.Dense(10, activation='softmax')(x)
+    predictions = layers.Dense(10, activation='softmax')(x)
 
-    model = tf.keras.Model(
-        inputs, predictions_1)
+    model = tf.keras.Model(inputs, predictions)
     return model
