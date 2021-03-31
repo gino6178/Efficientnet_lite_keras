@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from tensorflow.keras import layers
+=======
+from tensorflow.keras import layers, regularizers
+>>>>>>> 6b59553e93f50e8aedc59f32f2308f15a012e6a3
 import tensorflow as tf
 
 
