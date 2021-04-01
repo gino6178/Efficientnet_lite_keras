@@ -1,5 +1,4 @@
 from tensorflow.keras import layers
-from tensorflow.keras import layers, regularizers
 import tensorflow as tf
 
 
