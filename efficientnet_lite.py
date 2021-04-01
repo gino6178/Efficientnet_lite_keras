@@ -13,7 +13,7 @@ def _make_divisible(v, divisor=8, min_value=None):
 
 
 def conv_bn(x, filters, kernel_size,  strides=1, alpha=1, activation=True):
-    ilters = _make_divisible(filters * alpha)
+    filters = _make_divisible(filters * alpha)
     x = layers.Conv2D(
         filters=filters,
         kernel_size=kernel_size,
