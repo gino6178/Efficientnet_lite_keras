@@ -1,4 +1,4 @@
-# Efficientnet_lite_keras
+# Keras-Efficientnet_lite
 
 This repository contains a TensorFlow Keras reimplementation of EfficientNet-lite L0
 
