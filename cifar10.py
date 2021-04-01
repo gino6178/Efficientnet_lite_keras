@@ -24,7 +24,7 @@ x_test = x_test/127.5 - 1
 y_train = tf.keras.utils.to_categorical(y_train, 10)
 y_test = tf.keras.utils.to_categorical(y_test, 10)
 
-model = efficientnet_lite(input_shape=(32, 32, 3), alpha=1)
+model = efficientnet_lite(input_shape=(32, 32, 3), alpha=1, classes=10)
 model.summary()
 
 model.compile(

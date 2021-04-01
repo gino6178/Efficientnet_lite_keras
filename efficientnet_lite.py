@@ -47,7 +47,7 @@ def depthwiseConv_bn(x, depth_multiplier, kernel_size,  strides=1):
     return x
 
 
-def efficientnet_lite(input_shape=(224, 224, 3), alpha=1):
+def efficientnet_lite(input_shape=(224, 224, 3), alpha=1,classes=1000):
     inputs = layers.Input(shape=input_shape)
 
     # block 1
@@ -220,7 +220,7 @@ def efficientnet_lite(input_shape=(224, 224, 3), alpha=1):
     x = layers.GlobalAveragePooling2D()(x)
     x = layers.Dense(1000)(x)
 
-    predictions = layers.Dense(10, activation='softmax')(x)
+    predictions = layers.Dense(classes, activation='softmax')(x)
 
     model = tf.keras.Model(inputs, predictions)
     return model
